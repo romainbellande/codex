@@ -1,0 +1,32 @@
+body{
+  @include media-below($break-medium){
+    /* ------ [HEADER] ------ */
+    header{
+      #responsive-menu-toggle{
+        display: inline-block;
+        width: 20%;
+      }
+      .site-branding{
+        display: inline-block;
+        width: 78%;
+        vertical-align: top;
+        text-align: center;
+      }
+    }
+    /* ------ [OTHERS] ------ */
+    .search-field{
+      display: block;
+      width: 80%;
+      margin: auto;
+    }
+    .search-submit{
+      display: block;
+      width: 80%;
+      margin: auto;
+      margin-top: 20px;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: #C1C1C1;
+    }
+  }
+}

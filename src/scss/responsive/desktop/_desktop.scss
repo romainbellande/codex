@@ -1,0 +1,34 @@
+@include media-above($break-medium){
+  @import "menu";
+  html, body, .mm-page, #page, #wrap-header, #wrap-main{height: 100%;}
+  #page{
+    display: table;
+    #responsive-menu-toggle{
+      display: none;
+    }
+    #wrap-header{
+      width: 30%;
+      height: 100%;
+      display: table-cell;;
+      vertical-align: top;
+      padding: 0;
+      background-color: #2A2A2A;
+      .site-title{
+        color: #D5D5D5;
+        text-align: center;
+      }
+    }
+    #wrap-main{
+      width: 69%;
+      display: table-cell;;
+      vertical-align: top;
+      padding: 0;
+      article{
+        margin-left: 5%;
+      }
+    }
+    #wrap-footer{
+      display: none;
+    }
+  }
+}

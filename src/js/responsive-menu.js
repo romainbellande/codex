@@ -2,33 +2,29 @@
 
 // Menu toggle script adapted from _s: https://github.com/Automattic/_s
 ;(function() {
-  var nav       = document.getElementById('site-navigation'),
-      menu      = document.getElementById('responsive-menu'),
-      button    = document.getElementById('responsive-menu-toggle');
-
-  // Early exit if we're missing anything essential
-  if (!nav || typeof button === 'undefined') {
-    return;
-  }
-
-  // Hide button if menu is empty and return early
-  if (typeof menu === 'undefined') {
-    button.style.display = 'none';
-    return;
-  }
-
-  // Toggle navigation; add or remove a class to both the button and the nav element itself
-  button.onclick = function() {
-    if (button.className.indexOf( 'toggled' ) !== -1) {
-      button.className = button.className.replace(' toggled', '');
+  // Fonction exécutée au redimensionnement
+function redimensionnement() {
+  var result = document.getElementById('result');
+  if("matchMedia" in window) { // Détection
+    if(window.matchMedia("(min-width:620px)").matches) {
+      desktop();
     } else {
-      button.className += ' toggled';
+      mobile();
     }
+  }
+}
+// launch at loading
+redimensionnement();
+// On lie l'événement resize à la fonction
+window.addEventListener('resize', redimensionnement, false);
 
-    if (menu.className.indexOf( 'toggled' ) !== -1) {
-      menu.className = menu.className.replace(' toggled', '');
-    } else {
-      menu.className += ' toggled';
-    }
-  };
+
+function desktop(){
+  console.log("Desktop rendering");
+}
+
+function mobile(){
+  console.log("Mobile rendering");
+}
+
 } )();

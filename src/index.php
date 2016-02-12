@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php get_search_form(); ?>
   <div id="wrap-content" class="wrap-content">
     <div id="content" class="site-content">
       <section id="primary" class="content-area">
@@ -20,7 +21,7 @@
             </article>
           <?php endwhile;
         } else { ?>
-          <article id="post-0" class="post no-results not-found">
+          <!-- <article id="post-0" class="post no-results not-found">
             <header class="entry-header">
               <h1><?php _e( 'Not found', 'voidx' ); ?></h1>
             </header>
@@ -28,7 +29,7 @@
               <p><?php _e( 'Sorry, but your request could not be completed.', 'voidx' ); ?></p>
               <?php get_search_form(); ?>
             </div>
-          </article>
+          </article> -->
         <?php } ?>
         </main>
         <?php voidx_post_navigation(); ?>

@@ -39,3 +39,23 @@ Domain Path: #{metadata(theme-text-domain-path)}
 @import "menus";
 @import "navigation";
 @import "sidebar";
+@import "font-awesome/font-awesome";
+@import "responsive/mobile/mobile";
+@import "responsive/desktop/desktop";
+
+.screen-reader-text{
+  display: none;
+}
+
+article.post{
+  background: #F1F1F1;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 5px 5px #888888;
+  .entry-header{
+    a{
+      text-shadow: 1px 4px 6px #E6F3FF, 0 0 0 #000, 1px 4px 6px #def;
+      color: rgba(25, 26, 27, 0.8);
+    }
+  }
+}
